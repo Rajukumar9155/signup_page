@@ -38,6 +38,7 @@ header{
     font-weight: 500;
     margin-left: 40px;
 }
+
 .navigation a::after{
     content: '';
     position: absolute;
@@ -73,7 +74,54 @@ header{
 background: #fff;
 color: #162938;
 }
+.hamburger,.hamburger-close{
+    color: #fff;
+    border: none;
+    outline: none;
+    background: transparent;
+    position: absolute;
+    right: 50px;
+    font-size: 1.1em;
+    margin-top: 5px;
+    display: none;
+
+}
+@media screen and (max-width:925px) {
+    .logo{
+        font-size: 1.5em;
+    }
+    .navigation a{
+        font-size: 0.7em;
+        font-weight: 500;
+        margin-left: 25px;
+    }
+    .navigation .btnLogin-popup{
+        width: 80px;
+        height: 30px;
+        font-size: 0.7em;
+        font-weight: 500;
+        margin-left: 25px;
+        transition: .5s;
+    }
+}
+@media screen and (max-width:650px) {
+    .navigation{
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        flex-direction: column;
+        padding: 10px;
+        justify-content: space-evenly;
+        height: 70vh;
+        user-select: none;
+    }
+    .hamburger{
+        display: block;
+    }
+}
+
 .wrapper{
+    
     position: relative;
     width: 400px;
     height: 440px;
@@ -88,6 +136,7 @@ color: #162938;
     overflow: hidden;
     transform: scale(0);
    transition: transform .5s ease, height .2s ease ;
+   z-index: 105;
 }
 
 .wrapper.active-popup{
